@@ -1,5 +1,6 @@
 /**
  * Array of routes accessible to the public, does not require authentication
+ * can be accessed by logged/unknown users
  * @type {string}
  */
 export const publicRoutes = [
@@ -8,13 +9,16 @@ export const publicRoutes = [
 ]
 
 /**
- * Routes for authentication
+ * Routes used for authentication
+ * will redirect logged users to settings
  * @type {string}
  */
 export const authRoutes = [
     "/auth/login",
     "/auth/register",
-    "/auth/error"
+    "/auth/error",
+    "/auth/reset",
+    "/auth/new-password"
 ]
 
 /**
